@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    //Notifiable is a trait
     use Notifiable;
 
     /**
@@ -15,6 +16,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    //properties that can be edited
     protected $fillable = [
         'name', 'email', 'password',
     ];
