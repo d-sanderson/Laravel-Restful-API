@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Poll extends Model
 {
-    protected $fillable = [
-        "title",
-        "author"
-    ];
+    protected $fillable = [ "title" ];
+
+    public function questions() {
+        return $this->hasMany('App\Question');
+    }
 }
